@@ -8,7 +8,7 @@ function generateNames(a) {
   } 
  return arr;
 }
-let names = generateNames(3);
+let names = generateNames(process.argv[2]);
 console.log(names);
 
 
