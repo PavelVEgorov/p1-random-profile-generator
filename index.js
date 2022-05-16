@@ -6,9 +6,13 @@ function generateNames(a) {
     let name = randomProfile.name();
     arr.push(name);
   } 
- return arr;
+ return arr.join('\n');
 }
 let names = generateNames(process.argv[2]);
 console.log(names);
+
+const fs = require('fs');
+fs.writeFileSync('results/3-names.txt', names);
+
 
 
