@@ -8,11 +8,34 @@ function generateNames(a) {
   } 
  return arr.join('\n');
 }
+
 let names = generateNames(process.argv[2]);
-console.log(names);
+
+function getRandomInteger() {
+  return Math.floor(Math.random() * 20) + 1;
+}
+
+let randomInteger =  generateNames(getRandomInteger());
+// console.log(randomInteger);
+
 
 const fs = require('fs');
-fs.writeFileSync('results/3-names.txt', names);
+
+if (process.argv[2] == undefined){
+  fs.writeFileSync('results/3-names.txt', randomInteger);
+} else fs.writeFileSync('results/3-names.txt', names);
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
