@@ -1,11 +1,11 @@
 let randomProfile = require('random-profile-generator');
 
-function generateNames(a) {
+function generateNames(num) {
   let arr = [];
-  for(let i = 0; i < a; i++){
+  for(let i = 0; i < num; i++){
     let name = randomProfile.name();
     arr.push(name);
   } 
- return arr.join('\n');
+ return arr;
 }
 module.exports = generateNames;
